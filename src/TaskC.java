@@ -22,3 +22,69 @@ public class TaskC {
         }
     }
 }
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class Pl {
+    public static void main(String[]args){
+        Scanner in=new Scanner(System.in);
+        int n= in.nextInt();
+        int m= in.nextInt();
+        int[][]table=new int[n][m];
+        int count=1;
+
+        for(int j=0;j<m;j++){
+            for(int i=0;i<table.length;i++){
+                table[i][j]=count;
+                count++;
+            }
+        }
+        for(int i=0;i<table.length;i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.printf("%4d", table[i][j]);
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class Pk {
+    public static void main(String[]args){
+        Scanner in=new Scanner(System.in);
+        int n= in.nextInt();
+        int m= in.nextInt();
+        int[][]table=new int[n][m];
+        int count=1;
+
+        for(int j=0;j<m;j++){
+            for(int i=0;i<table.length;i++){
+                table[i][j]=count;
+                count++;
+            }
+        }
+        for(int i=0;i<table.length;i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.printf("%4d", table[i][j]);
+            }
+            System.out.println();
+        }
+        for(int[]row:table){
+            int sum=0;
+            for(int item:row){
+                sum+=item;
+            }
+            System.out.print("summa= "+sum+" ");
+        }
+    }
+}
+
+int[][]tabl=new int[m][n];
+        for(int i=0;i<tabl.length;i++) {
+            for (int j = 0; j < tabl[i].length; j++) {
+                tabl[i][j]=table[i][j];
+            }
+            print2dArrg(tabl);
+        }
